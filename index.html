@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hope Foundation</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Udaan Foundation</title>
+  <link rel="stylesheet" href  ="style.css" />
 </head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="container nav-container">
-      <h1 class="logo">Hope Foundation</h1>
+      <h1 class="logo">Udaan Foundation</h1>
       <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#volunteer">Volunteer</a>
         <a href="#about">About</a>
+        <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
       </nav>
     </div>
   </header>
@@ -22,11 +23,17 @@
   <!-- Home -->
   <section id="home" class="section home-section">
     <div class="container text-center">
-      <h2>Welcome to Hope Foundation</h2>
-      <p>
-        We are a non-profit organization committed to improving lives through
-        community service and educational initiatives. Join us in making a
-        difference.
+      <h1>Welcome to Udaan Foundation</h1>
+      <p class="tagline">
+
+
+        Udaan Foundation is committed to uplifting lives and unlocking the potential of underserved communities across India. 
+        We work at the grassroots level to promote education, women empowerment, healthcare, and skill development.
+        <br>
+
+        Our mission is to give wings—Udaan—to every dream that deserves to soar. Whether it’s a child needing school supplies or a mother seeking vocational training, we’re here to help them rise.
+        <br>
+        Join us in creating a more just, compassionate, and empowered society—one step, one life at a time.
       </p>
     </div>
   </section>
@@ -37,7 +44,7 @@
   <!-- Volunteer Form -->
   <section id="volunteer" class="section volunteer-section">
     <div class="container text-center">
-      <h2>Become a Volunteer</h2>
+      <h2 class="head1">Become a Volunteer</h2>
       <form class="form">
         <input type="text" placeholder="Full Name" required />
         <input type="email" placeholder="Email Address" required />
@@ -51,7 +58,7 @@
       <h2>About Us</h2>
       <div class="card">
         <p>
-          Founded in 2010, Hope Foundation empowers underprivileged communities
+          Founded in 2010, Udaan Foundation empowers underprivileged communities
           with education, healthcare, and livelihood programs. We believe in
           sustainable change through active participation.
         </p>
@@ -67,5 +74,20 @@
   <footer class="footer">
     <p>&copy; 2025 Hope Foundation. All rights reserved.</p>
   </footer>
+  <script>
+  const toggleBtn = document.getElementById('themeToggle');
+  const body = document.body;
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    toggleBtn.textContent = body.classList.contains('dark-mode') 
+      ? '☀️ Light Mode' 
+      : '🌙 Dark Mode';
+  });
+</script>
+
+
+
+
 </body>
 </html>

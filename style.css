@@ -9,6 +9,18 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
+.tagline {
+  
+  background-color: #f3f4f6;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
 .container {
   max-width: 1200px;
@@ -90,6 +102,16 @@ body {
   gap: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+.head1{
+    border: 2px solid black;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
 
 .form input,
 .form textarea {
@@ -133,4 +155,71 @@ body {
     display: block;
     margin: 0.5rem 0;
   }
+}
+
+/* 🌙 Dark Mode: Global Page Settings */
+.dark-mode {
+  background-color: #000; /* full black background */
+  color: #fff; /* white text across the site */
+}
+
+/* Header & Footer stay green */
+.dark-mode .header,
+.dark-mode .footer {
+  background-color: #059669;
+  color: #fff;
+}
+
+/* Section containers */
+.dark-mode .section {
+  background-color: #000;
+  color: #fff;
+}
+#themeToggle {
+  background-color: #059669;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Cards and forms - darker background with light borders */
+.dark-mode .card,
+.dark-mode .form {
+  background-color: #111;
+  border: 1px solid #f5f5f5;
+  color: #fff;
+}
+
+/* Input and textarea fields */
+.dark-mode input,
+.dark-mode textarea
+,.dark-mode .tagline{
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #f5f5f5;
+}
+
+/* Button stays green */
+.dark-mode .form button,
+.dark-mode .theme-toggle {
+  background-color: #059669;
+  color: #fff;
+}
+
+/* Nav Links */
+.dark-mode .nav-links a {
+  color: #fff;
+}
+
+/* Transition for smooth effect */
+body,
+.section,
+.header,
+.footer,
+.card,
+.form,
+input,
+textarea {
+  transition: background-color 0.3s, color 0.3s;
 }
